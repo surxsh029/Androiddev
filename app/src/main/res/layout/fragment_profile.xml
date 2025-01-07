@@ -5,31 +5,41 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Profile">
-
-
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Profile"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/leftarrow"
+        android:drawableRight="@drawable/dots"
+        />
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/profile"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/profile"
         android:elevation="10dp"
-
-
         />
-    <ImageView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/background"
         android:scaleType="fitXY"
-        android:id="@+id/background"
+        android:id="@+id/imagebackground"
+        android:layout_marginTop="50dp"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -38,10 +48,119 @@
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textColor="#000"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
         android:text="Suresh Bishnoi"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#000"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="kanwasuresh363@gamil.com"
+        />
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:hint="What's your first name?"
+        android:inputType="number"
+        android:background="#fff"
+        android:padding="14dp"
+        android:textColorHint="#757474"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagebackground"
+        />
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:hint="And your Last name?"
+        android:inputType="number"
+        android:background="#fff"
+        android:padding="14dp"
+        android:textColorHint="#757474"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstname"
+        />
+    <EditText
+        android:id="@+id/emailid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:hint="Email Id"
+        android:inputType="number"
+        android:background="#fff"
+        android:padding="14dp"
+        android:textColorHint="#757474"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastname"
+        />
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:hint="Select your gender"
+        android:inputType="number"
+        android:background="#fff"
+        android:padding="14dp"
+        android:textColorHint="#757474"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailid"
+        android:drawableRight="@drawable/downarrow"
+        />
+    <EditText
+        android:id="@+id/dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:hint="What is your Date of Birth"
+        android:inputType="number"
+        android:background="#fff"
+        android:padding="14dp"
+        android:textColorHint="#757474"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender"
+        android:drawableRight="@drawable/calendar"
+        />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updatebtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="20dp"
+        app:cornerRadius="12dp"
+        android:text="Update Profile"
+        android:textSize="20sp"
+        android:backgroundTint="#0261C8"
+        android:textColor="#fff"
+
+        />
+
 
 
 
